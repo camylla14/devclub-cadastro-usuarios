@@ -9,11 +9,11 @@ import {
   Form,
   ContainerInputs,
   Input,
-  Button,
   InputLabel,
 } from './styles'
 
 import UsersImage from '../../assets/users.png'
+import Button from '../../components/Button'
 
 function Home() {
   const inputName = useRef()
@@ -23,7 +23,7 @@ function Home() {
   async function registerNewUser(){
     const data = await api.post('/usuarios', {
       email: inputEmail.current.value,
-      age: inputAge.current.value,
+      age: parseInt(inputAge.current.value),
       name: inputName.current.value
     })
 
