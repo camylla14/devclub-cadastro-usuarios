@@ -5,15 +5,14 @@ import api from '../../services/api'
 import {
   Title,
   Container,
-  TopBackground,
   Form,
   ContainerInputs,
   Input,
   InputLabel,
 } from './styles'
 
-import UsersImage from '../../assets/users.png'
 import Button from '../../components/Button'
+import TopBackground from '../../components/TopBackground'
 
 function Home() {
   const inputName = useRef()
@@ -32,10 +31,8 @@ function Home() {
 
   return (
     <Container>
-      <TopBackground>
-        <img src={UsersImage} alt='imagem-usuarios' />
-      </TopBackground>
-
+      
+    <TopBackground />
 
       <Form>
         <Title>Cadastrar Usuários</Title>
